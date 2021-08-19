@@ -1,0 +1,1 @@
+Trying to set up a collatz sequence following one of the example exercises from automate the boring stuff (chapter 3)
