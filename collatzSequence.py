@@ -1,14 +1,23 @@
-
+import time, sys
 def collatz(number):
     if (number % 2) == 0:
         print(number // 2)
-        return (number)
+        time.sleep(0.1)
+        return (number // 2)
     elif (number % 2) == 1:
+        time.sleep(0.1)
         print(3 * number + 1)
-        return (number)
+        return (3 * number + 1)
 
-print('Please enter your number to collatz')
-number = int(input())
-while number != None:
-    collatz(number)
+n = int(input('Please enter your number to collatz.'))
 
+while True:
+
+    try:
+        while n != 1:
+            n = collatz(n)
+        while n == 1:
+            n = int(input('Please enter your number to collatz.'))
+            n = collatz(n)
+    except ValueError:
+        print('Please try again.')
