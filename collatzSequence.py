@@ -1,4 +1,5 @@
 import time, os
+
 def collatz(number):
     if (number % 2) == 0:
         print(number // 2)
@@ -9,11 +10,10 @@ def collatz(number):
         print(3 * number + 1)
         return (3 * number + 1)
 
+n = int(input('Please enter your number to collatz.'))
+
 while True:
-
     try:
-        n = int(input('Please enter your number to collatz.'))
-
         while n != 1:
             n = collatz(n)
         while n == 1:
