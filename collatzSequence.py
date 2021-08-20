@@ -20,6 +20,6 @@ while True:
             n = int(input('Please enter your number to collatz.'))
             n = collatz(n)
     except ValueError:
-        print('Please try again.')
+        print('Please enter an integer.')
     except KeyboardInterrupt:
         os._exit(1)
